@@ -18,23 +18,83 @@
 
 <div class="contenedor">
 
-    <div class="card">
-        <h2>Datos del Usuario</h2>
-        <p>Registro de personas y empresas que entregan residuos.</p>
-    </div>
+    <!-- FORMULARIO COMPLETO -->
+    <div class="card formulario">
 
-    <div class="card">
-        <h2>Datos del Residuo</h2>
-        <ul>
-            <li>Tipo de residuo electrónico</li>
-            <li>Peso</li>
-            <li>Estado físico</li>
-        </ul>
-    </div>
+        <h2>Registro de Entradas</h2>
+        <p>Complete la información del usuario y del residuo electrónico.</p>
 
-    <div class="card">
-        <h2>Costos Económicos</h2>
-        <p>Fondos para el pago del servicio de recolección.</p>
+        <form action="#" method="post">
+
+            <!-- DATOS DEL USUARIO -->
+            <h3>Datos del Usuario</h3>
+
+            <label for="tipo_usuario">Tipo de usuario:</label>
+            <select id="tipo_usuario" name="tipo_usuario">
+                <option value="persona">Persona Natural</option>
+                <option value="empresa">Empresa</option>
+            </select>
+
+            <label for="nombre">Nombre o razón social:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="identificacion">Número de identificación / NIT:</label>
+            <input type="text" id="identificacion" name="identificacion" placeholder="Documento o NIT" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Número de contacto">
+
+
+            <!-- DATOS DEL RESIDUO -->
+            <h3>Datos del Residuo</h3>
+
+            <label for="tipo_residuo">Tipo de residuo electrónico:</label>
+            <select id="tipo_residuo" name="tipo_residuo">
+                <option>Computador</option>
+                <option>Celular</option>
+                <option>Televisor</option>
+                <option>Nevera</option>
+                <option>Baterías</option>
+                <option>Electrodoméstico pequeño</option>
+            </select>
+
+            <label for="peso">Peso aproximado (kg):</label>
+            <input type="number" id="peso" name="peso" min="1" step="0.1" placeholder="Ej: 2.5">
+
+            <label for="estado">Estado del residuo:</label>
+            <select id="estado" name="estado">
+                <option>Funcional</option>
+                <option>Semifuncional</option>
+                <option>No funcional</option>
+                <option>Peligroso</option>
+            </select>
+
+
+            <!-- COSTOS ECONÓMICOS (SIMULACIÓN) -->
+            <h3>Costos Económicos</h3>
+
+            <label for="costo_estimado">Costo de recolección (simulado):</label>
+            <input type="text" id="costo_estimado" name="costo_estimado" value="$15.000 COP" disabled>
+
+            <label for="medio_pago">Medio de pago:</label>
+            <select id="medio_pago" name="medio_pago">
+                <option>Tarjeta débito</option>
+                <option>Tarjeta crédito</option>
+                <option>Transferencia bancaria</option>
+                <option>Pago en efectivo</option>
+            </select>
+
+            <!-- BOTONES -->
+            <div class="botones-form">
+                <button type="submit" class="btn">Registrar Entrada</button>
+                <button type="reset" class="btn cancelar">Cancelar</button>
+            </div>
+
+        </form>
+
     </div>
 
 </div>
