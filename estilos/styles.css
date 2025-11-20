@@ -1,0 +1,197 @@
+/* ================================
+   ESTILOS GENERALES
+================================ */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #1a4d7a;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ENCABEZADO / NAVBAR
+================================ */
+header {
+    background: #1a4d7a;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 8px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #1a4d7a;
+    border-radius: 5px;
+}
+
+
+/* ================================
+   CONTENEDORES / SECCIONES
+================================ */
+section, .contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+/* ================================
+   TARJETAS DE CONTENIDO
+================================ */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #0e3c66;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+.boton {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #1a4d7a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #163d60;
+}
+
+
+/* ================================
+   TABLAS (para datos del sistema)
+================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #1a4d7a;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+    background: #f0f0f0;
+}
+
+
+/* ================================
+   FORMULARIOS
+================================ */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+button {
+    padding: 12px 18px;
+    background: #1a4d7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #153854;
+}
+
+
+/* ================================
+   PIE DE PÁGINA
+================================ */
+footer {
+    background: #1a4d7a;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE - MÓVIL
+================================ */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
