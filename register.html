@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registrar Residuo — ECO-TECH</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">ECO-TECH</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="register.html">Registrar Residuo</a>
+        <a href="dashboard.html">Mi Panel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h2>Registrar Residuo Electrónico</h2>
+    <p>Completa la información. Esto es un prototipo: los datos se guardan localmente en tu navegador.</p>
+
+    <form id="wasteForm" class="card" onsubmit="return registerWaste(event)">
+      <label>
+        Nombre / Empresa:
+        <input type="text" id="userName" required />
+      </label>
+
+      <label>
+        Email:
+        <input type="email" id="userEmail" required />
+      </label>
+
+      <label>
+        Tipo de residuo:
+        <select id="wasteType" required>
+          <option value="">-- Seleccionar --</option>
+          <option value="telefono">Teléfono</option>
+          <option value="laptop">Laptop</option>
+          <option value="bateria">Batería</option>
+          <option value="monitor">Monitor</option>
+          <option value="otros">Otros</option>
+        </select>
+      </label>
+
+      <label>
+        Peso (kg):
+        <input type="number" id="weightKg" min="0" step="0.1" required />
+      </label>
+
+      <label>
+        Estado:
+        <select id="condition" required>
+          <option value="">-- Seleccionar --</option>
+          <option value="funciona">Funciona</option>
+          <option value="no_funciona">No funciona</option>
+          <option value="parcial">Parcial</option>
+        </select>
+      </label>
+
+      <label>
+        Dirección / Punto de recolección:
+        <input type="text" id="pickupAddress" placeholder="Dirección o punto de referencia" required />
+      </label>
+
+      <label>
+        Observaciones:
+        <textarea id="description" rows="3" placeholder="Detalles adicionales (opcional)"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">Registrar residuo</button>
+        <a class="btn ghost" href="dashboard.html">Ver mis residuos</a>
+      </div>
+    </form>
+
+    <div id="message" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 ECO-TECH — Prototipo</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
