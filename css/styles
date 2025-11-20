@@ -1,0 +1,48 @@
+/* Reset muy simple */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, Arial, sans-serif; }
+body { background:#f6f8fa; color:#1f2937; line-height:1.45; }
+.container { max-width:1000px; margin:0 auto; padding:20px; }
+
+/* Header */
+.site-header { background:#0f172a; color:white; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding:18px 20px; }
+.brand { font-size:1.4rem; letter-spacing:1px; }
+nav a { color: #cbd5e1; margin-left:18px; text-decoration:none; font-weight:600; }
+nav a:hover { color:white; }
+
+/* Footer */
+.site-footer { margin-top:32px; padding:14px 0; text-align:center; color:#64748b; }
+
+/* Hero */
+.hero { padding:32px 0; text-align:center; }
+.hero h2 { font-size:1.6rem; margin-bottom:10px; }
+.hero p { margin-bottom:16px; color:#334155; }
+
+/* Buttons */
+.btn { display:inline-block; background:#0ea5a4; color:white; padding:10px 14px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; font-weight:700; }
+.btn:hover { opacity:0.95; }
+.btn.ghost { background:transparent; color:#0f172a; border:2px solid #0ea5a4; }
+.btn.danger { background:#ef4444; }
+
+/* Features */
+.features { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; margin-top:22px; }
+.features article { background:white; padding:16px; border-radius:10px; box-shadow:0 4px 12px rgba(15,23,42,0.06); }
+
+/* Forms & cards */
+.card { background:white; padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.05); margin-top:12px; }
+label { display:block; margin-bottom:10px; }
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+  width:100%; padding:8px 10px; border:1px solid #e6eef2; border-radius:6px; margin-top:6px;
+}
+.form-actions { margin-top:12px; display:flex; gap:10px; align-items:center; }
+
+/* Grid list */
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:16px; }
+.waste-card h4 { margin-bottom:8px; }
+.card-actions { margin-top:12px; display:flex; gap:8px; }
+
+/* Narrow container */
+.narrow { max-width:720px; }
+
+/* small helpers */
+small { font-size:0.9rem; color:#64748b; }
