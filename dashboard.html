@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Panel — ECO-TECH</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">ECO-TECH</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="register.html">Registrar Residuo</a>
+        <a href="dashboard.html">Mi Panel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Mi Panel</h2>
+    <p>Lista de residuos registrados en este navegador (local).</p>
+
+    <section id="wastesList" class="grid"></section>
+
+    <template id="waste-card-tpl">
+      <article class="card waste-card">
+        <h4 class="waste-type"></h4>
+        <p><strong>Usuario:</strong> <span class="waste-user"></span></p>
+        <p><strong>Peso:</strong> <span class="waste-weight"></span> kg</p>
+        <p><strong>Estado:</strong> <span class="waste-condition"></span></p>
+        <p><strong>Estatus de proceso:</strong> <span class="waste-status"></span></p>
+        <div class="card-actions">
+          <button class="btn assign-btn">Asignar recolección</button>
+          <button class="btn ghost generate-cert-btn">Generar certificado</button>
+          <button class="btn danger delete-btn">Eliminar</button>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 ECO-TECH — Prototipo</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
