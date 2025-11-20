@@ -9,29 +9,125 @@
 
 <header>
     <h1>Salidas del Sistema</h1>
-    <nav><ul><li><a href="index.html">Inicio</a></li></ul></nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="contenedor">
 
-    <div class="card">
+    <!-- INCENTIVOS -->
+    <div class="card formulario">
         <h2>Incentivos</h2>
-        <p>Descuentos, puntos o bonos por la entrega responsable.</p>
+        <p>Generación de descuentos, puntos o bonos por la entrega responsable.</p>
+
+        <form action="#" method="post">
+
+            <label for="usuario_inc">Usuario:</label>
+            <input type="text" id="usuario_inc" name="usuario_inc" placeholder="Nombre o ID del usuario">
+
+            <label for="residuo_inc">Tipo de residuo entregado:</label>
+            <select id="residuo_inc" name="residuo_inc">
+                <option>Computador</option>
+                <option>Celular</option>
+                <option>Televisor</option>
+                <option>Nevera</option>
+                <option>Baterías</option>
+                <option>Electrodoméstico pequeño</option>
+            </select>
+
+            <label for="puntaje">Puntos generados:</label>
+            <input type="text" id="puntaje" value="30 pts" disabled>
+
+            <label for="bono">Bono disponible:</label>
+            <input type="text" id="bono" value="$10.000 COP" disabled>
+
+            <button class="btn" type="submit">Generar Incentivo</button>
+
+        </form>
     </div>
 
-    <div class="card">
+    <!-- ALERTAS Y NOTIFICACIONES -->
+    <div class="card formulario">
         <h2>Alertas y Notificaciones</h2>
-        <p>Recordatorios de recolección, vencimientos y novedades.</p>
+        <p>Envío de recordatorios sobre recolección o vencimientos.</p>
+
+        <form action="#" method="post">
+
+            <label for="usuario_alerta">Usuario / Empresa:</label>
+            <input type="text" id="usuario_alerta" name="usuario_alerta" placeholder="ID o nombre">
+
+            <label for="tipo_alerta">Tipo de notificación:</label>
+            <select id="tipo_alerta" name="tipo_alerta">
+                <option>Recordatorio de recolección</option>
+                <option>Vencimiento de residuos</option>
+                <option>Novedades del proceso</option>
+                <option>Confirmación de tratamiento</option>
+            </select>
+
+            <label for="fecha_alerta">Fecha programada:</label>
+            <input type="date" id="fecha_alerta" name="fecha_alerta">
+
+            <label for="mensaje_alerta">Mensaje:</label>
+            <textarea id="mensaje_alerta" name="mensaje_alerta" rows="3"
+                      placeholder="Escriba el mensaje a enviar"></textarea>
+
+            <button class="btn" type="submit">Enviar Notificación</button>
+
+        </form>
     </div>
 
-    <div class="card">
+    <!-- BASE DE DATOS AMBIENTAL -->
+    <div class="card formulario">
         <h2>Base de Datos Ambiental</h2>
-        <p>Información consolidada sobre residuos y recicladores.</p>
+        <p>Consulta de información consolidada sobre residuos y recicladores.</p>
+
+        <form action="#" method="post">
+
+            <label for="filtro">Buscar por ID o tipo de residuo:</label>
+            <input type="text" id="filtro" name="filtro" placeholder="Ej. RE-2025-001">
+
+            <button class="btn" type="submit">Consultar</button>
+
+        </form>
+
+        <!-- TABLA SIMULADA -->
+        <table class="tabla-datos">
+            <thead>
+                <tr>
+                    <th>ID Residuo</th>
+                    <th>Tipo</th>
+                    <th>Peso</th>
+                    <th>Estado</th>
+                    <th>Centro de reciclaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RE-001</td>
+                    <td>Computador</td>
+                    <td>3.2 kg</td>
+                    <td>Reciclado</td>
+                    <td>EcoCiclo S.A.</td>
+                </tr>
+                <tr>
+                    <td>RE-002</td>
+                    <td>Baterías</td>
+                    <td>1.1 kg</td>
+                    <td>En tratamiento</td>
+                    <td>GreenWorld</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </div>
 
-<footer>© 2025 ECO-TECH</footer>
+<footer>
+    © 2025 ECO-TECH
+</footer>
 
 </body>
 </html>
