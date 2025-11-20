@@ -9,29 +9,101 @@
 
 <header>
     <h1>Mecanismos de Control</h1>
-    <nav><ul><li><a href="index.html">Inicio</a></li></ul></nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="contenedor">
 
-    <div class="card">
+    <!-- VALIDACIÓN DE DATOS -->
+    <div class="card formulario">
         <h2>Validación de Datos</h2>
-        <p>Verificación de información registrada.</p>
+        <p>Verificación de la información registrada en el sistema.</p>
+
+        <form action="#" method="post">
+
+            <label for="id_validacion">ID o documento del usuario:</label>
+            <input type="text" id="id_validacion" name="id_validacion" placeholder="Ej: 1032456 o NIT">
+
+            <label for="campo_validar">Campo a validar:</label>
+            <select id="campo_validar" name="campo_validar">
+                <option>Correo electrónico</option>
+                <option>Número telefónico</option>
+                <option>Tipo de residuo</option>
+                <option>Peso registrado</option>
+                <option>Estado del residuo</option>
+            </select>
+
+            <label for="valor_ingresado">Valor registrado:</label>
+            <input type="text" id="valor_ingresado" name="valor_ingresado" placeholder="Valor a verificar">
+
+            <button class="btn" type="submit">Validar Datos</button>
+
+        </form>
     </div>
 
-    <div class="card">
+    <!-- SEGURIDAD DIGITAL -->
+    <div class="card formulario">
         <h2>Seguridad Digital</h2>
-        <p>Protección de datos personales y ambientales.</p>
+        <p>Simulación de protección y monitoreo de datos personales y ambientales.</p>
+
+        <form action="#" method="post">
+
+            <label for="tipo_seguridad">Tipo de solicitud:</label>
+            <select id="tipo_seguridad" name="tipo_seguridad">
+                <option>Reporte de intento de acceso no autorizado</option>
+                <option>Solicitud de cifrado de datos</option>
+                <option>Verificación de identidad</option>
+                <option>Revisión de permisos y roles</option>
+            </select>
+
+            <label for="usuario_seguridad">ID o nombre del usuario:</label>
+            <input type="text" id="usuario_seguridad" name="usuario_seguridad" placeholder="Usuario afectado">
+
+            <label for="detalle_seguridad">Descripción del evento:</label>
+            <textarea id="detalle_seguridad" name="detalle_seguridad" rows="3"
+                      placeholder="Describa el incidente o solicitud"></textarea>
+
+            <button class="btn" type="submit">Registrar Evento de Seguridad</button>
+
+        </form>
     </div>
 
-    <div class="card">
+    <!-- RETROALIMENTACIÓN -->
+    <div class="card formulario">
         <h2>Retroalimentación</h2>
-        <p>Usuarios reportan fallas o mejoras del sistema.</p>
+        <p>Los usuarios pueden reportar fallas o sugerir mejoras del sistema.</p>
+
+        <form action="#" method="post">
+
+            <label for="usuario_retro">Nombre del usuario:</label>
+            <input type="text" id="usuario_retro" name="usuario_retro" placeholder="Nombre o identificación">
+
+            <label for="tipo_retro">Tipo de retroalimentación:</label>
+            <select id="tipo_retro" name="tipo_retro">
+                <option>Error técnico</option>
+                <option>Problema con el registro</option>
+                <option>Sugerencia de mejora</option>
+                <option>Reporte de datos incorrectos</option>
+            </select>
+
+            <label for="mensaje_retro">Descripción:</label>
+            <textarea id="mensaje_retro" name="mensaje_retro" rows="4"
+                      placeholder="Escriba su comentario o reporte"></textarea>
+
+            <button class="btn" type="submit">Enviar Retroalimentación</button>
+
+        </form>
     </div>
 
 </div>
 
-<footer>© 2025 ECO-TECH</footer>
+<footer>
+    © 2025 ECO-TECH
+</footer>
 
 </body>
 </html>
