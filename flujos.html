@@ -9,33 +9,117 @@
 
 <header>
     <h1>Flujos de Información</h1>
-    <nav><ul><li><a href="index.html">Inicio</a></li></ul></nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="contenedor">
 
-    <div class="card">
+    <!-- FLUJO PRINCIPAL -->
+    <div class="card formulario">
         <h2>Flujo Principal</h2>
-        <ul>
-            <li>Usuario registra residuo</li>
-            <li>El sistema clasifica y asigna punto</li>
-            <li>Transportador actualiza estado</li>
-            <li>Centro de reciclaje confirma proceso</li>
-            <li>Sistema genera certificado</li>
-        </ul>
+        <p>Simulación del recorrido completo del residuo electrónico.</p>
+
+        <form action="#" method="post">
+
+            <!-- 1. USUARIO REGISTRA RESIDUO -->
+            <label for="id_residuo_fp">ID del residuo:</label>
+            <input type="text" id="id_residuo_fp" name="id_residuo_fp" placeholder="Ej: RE-2025-150">
+
+            <label for="tipo_residuo_fp">Tipo de residuo:</label>
+            <select id="tipo_residuo_fp" name="tipo_residuo_fp">
+                <option>Computador</option>
+                <option>Celular</option>
+                <option>Televisor</option>
+                <option>Baterías</option>
+                <option>Nevera</option>
+                <option>Electrodoméstico pequeño</option>
+            </select>
+
+            <!-- 2. SISTEMA CLASIFICA Y ASIGNA PUNTO -->
+            <label for="punto_asignado">Punto de recolección asignado:</label>
+            <input type="text" id="punto_asignado" value="Centro de Acopio Zona Norte" disabled>
+
+            <!-- 3. TRANSPORTADOR ACTUALIZA ESTADO -->
+            <label for="estado_transporte">Estado del transporte:</label>
+            <select id="estado_transporte" name="estado_transporte">
+                <option>Pendiente</option>
+                <option>En ruta</option>
+                <option>Entregado al centro de reciclaje</option>
+            </select>
+
+            <!-- 4. CENTRO DE RECICLAJE CONFIRMA -->
+            <label for="confirmacion_reciclaje">Confirmación del centro de reciclaje:</label>
+            <select id="confirmacion_reciclaje" name="confirmacion_reciclaje">
+                <option>No recibido</option>
+                <option>Recibido y en proceso</option>
+                <option>Proceso finalizado</option>
+            </select>
+
+            <!-- 5. SISTEMA GENERA CERTIFICADO -->
+            <label for="certificado">Certificado generado:</label>
+            <input type="text" id="certificado" value="Certificado #CF-98765" disabled>
+
+            <button class="btn" type="submit">Procesar Flujo Principal</button>
+
+        </form>
     </div>
 
-    <div class="card">
+    <!-- FLUJOS SECUNDARIOS -->
+    <div class="card formulario">
         <h2>Flujos Secundarios</h2>
-        <ul>
-            <li>Intercambio de datos con entidades ambientales</li>
-            <li>Conexión con bancos para incentivos</li>
-        </ul>
+        <p>Simulación de intercambios de información externos.</p>
+
+        <form action="#" method="post">
+
+            <!-- Intercambio con entidades ambientales -->
+            <label for="entidad_ambiental">Entidad ambiental:</label>
+            <select id="entidad_ambiental" name="entidad_ambiental">
+                <option>Ministerio de Ambiente</option>
+                <option>Corporación Autónoma Regional</option>
+                <option>AUA (Autoridad Ambiental Urbana)</option>
+                <option>IDEAM</option>
+            </select>
+
+            <label for="tipo_envio">Tipo de reporte:</label>
+            <select id="tipo_envio" name="tipo_envio">
+                <option>Inventario de residuos</option>
+                <option>Reporte de reciclaje</option>
+                <option>Informe de trazabilidad</option>
+            </select>
+
+            <button class="btn" type="submit">Enviar Datos Ambientales</button>
+
+            <br><br>
+
+            <!-- Conexión con bancos -->
+            <h3>Notificación a Entidad Bancaria</h3>
+
+            <label for="banco">Banco o entidad de pago:</label>
+            <select id="banco" name="banco">
+                <option>Bancolombia</option>
+                <option>Banco de Bogotá</option>
+                <option>Davivienda</option>
+                <option>Nequi</option>
+                <option>Movii</option>
+            </select>
+
+            <label for="valor_incentivo">Valor del incentivo:</label>
+            <input type="number" id="valor_incentivo" name="valor_incentivo" placeholder="Ej: 15000">
+
+            <button class="btn" type="submit">Enviar Incentivo</button>
+
+        </form>
     </div>
 
 </div>
 
-<footer>© 2025 ECO-TECH</footer>
+<footer>
+    © 2025 ECO-TECH
+</footer>
 
 </body>
 </html>
